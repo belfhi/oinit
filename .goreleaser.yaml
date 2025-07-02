@@ -111,7 +111,7 @@ nfpms:
 
   - id: oinit-ca
     package_name: oinit-ca
-    builds:
+    ids:
       - oinit-ca
     homepage: https://github.com/belfhi/oinit
     maintainer: Johannes Reppin <johannesreppin@gmail.com>
@@ -141,7 +141,7 @@ nfpms:
 
   - id: oinit-openssh
     package_name: oinit-openssh
-    builds:
+    ids:
       - oinit-switch
       - oinit-shell
     homepage: https://github.com/belfhi/oinit
