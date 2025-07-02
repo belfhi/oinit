@@ -56,7 +56,7 @@ builds:
     mod_timestamp: "{{.CommitTimestamp}}"
 
 archives:
-  - format: tar.gz
+  - formats: [ 'tar.gz' ]
     name_template: >-
       {{ .ProjectName }}_
       {{- title .Os }}_
@@ -69,7 +69,7 @@ checksum:
   name_template: "checksums.txt"
 
 snapshot:
-  name_template: "{{ incpatch .Version }}-next"
+  version_template: "{{ incpatch .Version }}-next"
 
 changelog:
   sort: asc
@@ -81,10 +81,10 @@ changelog:
 nfpms:
   - id: oinit
     package_name: oinit
-    builds:
+    ids:
       - oinit
-    homepage: https://github.com/lbrocke/oinit
-    maintainer: Lukas Brocke <lukas@brocke.net>
+    homepage: https://github.com/belfhi/oinit
+    maintainer: Johannes Reppin <johannesreppin@gmail.com>
     description: |-
       Command-line tool to enable federated identities in OpenSSH.
     license: MIT
@@ -113,8 +113,8 @@ nfpms:
     package_name: oinit-ca
     builds:
       - oinit-ca
-    homepage: https://github.com/lbrocke/oinit
-    maintainer: Lukas Brocke <lukas@brocke.net>
+    homepage: https://github.com/belfhi/oinit
+    maintainer: Johannes Reppin <johannesreppin@gmail.com>
     description: |-
       Certificate authority for oinit command-line tool.
     license: MIT
@@ -144,8 +144,8 @@ nfpms:
     builds:
       - oinit-switch
       - oinit-shell
-    homepage: https://github.com/lbrocke/oinit
-    maintainer: Lukas Brocke <lukas@brocke.net>
+    homepage: https://github.com/belfhi/oinit
+    maintainer: Johannes Reppin <johannesreppin@gmail.com>
     description: |-
       oinit programs to integrate with OpenSSH.
     license: MIT
