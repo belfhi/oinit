@@ -50,5 +50,5 @@ jobs:
           args: release --clean
         env:
           REGISTRY: "ghcr.io"
-          IMAGE: "lbrocke/oinit-ca"
+          IMAGE: "belfhi/oinit-ca"
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
