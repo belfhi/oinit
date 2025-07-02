@@ -9,7 +9,7 @@ stages:
 
 default:
   tags:
-    - linux
+    - kubernetes-executor
   cache:
     paths:
       - .cache
